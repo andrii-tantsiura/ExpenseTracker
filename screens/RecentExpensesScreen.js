@@ -11,14 +11,15 @@ function RecentExpensesScreen() {
     const today = new Date();
     const date7DaysAgo = getDateMinusDays(today, 7);
 
-    console.log("date7DaysAgo: " + date7DaysAgo);
-    console.log("expense.date " + expense.date);
-    console.log(expense.date > date7DaysAgo);
     return expense.date > date7DaysAgo;
   });
 
   return (
-    <ExpensesOutput expenses={recentExpenses} expensesPeriod="Last 7 Days" />
+    <ExpensesOutput
+      expenses={recentExpenses}
+      expensesPeriod="Last 7 Days"
+      fallbackText={"No expenses registered for the last 7 days"}
+    />
   );
 }
 
