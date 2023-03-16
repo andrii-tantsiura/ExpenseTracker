@@ -3,7 +3,6 @@ import { FlatList } from "react-native";
 import ExpenseItem from "./ExpenseItem";
 
 function renderExpenseItem(itemData) {
-  console.log("date: " + itemData.date);
   return <ExpenseItem {...itemData.item} />;
 }
 
