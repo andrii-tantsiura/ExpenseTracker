@@ -32,7 +32,6 @@ function ExpensesOverview() {
             size={24}
             color={tintColor}
             onPress={() => {
-              console.log("tap");
               navigation.navigate("ManageExpense");
             }}
           />

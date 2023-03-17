@@ -39,8 +39,6 @@ function ManageExpensesScreen({ navigation, route }) {
       expensesCtx.addExpense(expenseData);
     }
 
-    console.log(expenseData);
-
     navigation.goBack();
   }
 
