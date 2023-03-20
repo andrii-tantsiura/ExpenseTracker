@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+
 import { GlobalStyles } from "../../constants/styles";
 import { getFormattedDate } from "../../util/date";
 import Button from "../UI/Button";
-
 import Input from "./Input";
 
 function ExpenseForm({ submitButtonLabel, defaultValues, onCancel, onSubmit }) {
@@ -46,7 +46,6 @@ function ExpenseForm({ submitButtonLabel, defaultValues, onCancel, onSubmit }) {
     const descriptionIsValid = expenseData.description.trim().length > 0;
 
     if (!amountIsValid || !dateIsValid || !descriptionIsValid) {
-      // onSubmit(expenseData);
       setInputs((curInputs) => {
         return {
           amount: {

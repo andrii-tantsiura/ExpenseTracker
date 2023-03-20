@@ -1,4 +1,5 @@
 import { TextInput, StyleSheet, View, Text } from "react-native";
+
 import { GlobalStyles } from "../../constants/styles";
 
 function Input({ style, textInputConfig, label, invalid }) {
@@ -10,7 +11,7 @@ function Input({ style, textInputConfig, label, invalid }) {
 
   return (
     <View style={[styles.inputContainer, style]}>
-      <Text style={[styles.label && invalid && styles.invalidLabel]}>
+      <Text style={[styles.label, invalid && styles.invalidLabel]}>
         {label}
       </Text>
       <TextInput style={inputStyles} {...textInputConfig} />
